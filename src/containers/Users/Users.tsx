@@ -21,6 +21,7 @@ const UserList: React.FC = () => {
 
     const { userList } = useSelector(getSlice);
     const dispatch = useDispatch();
+    console.log(userList)
     
 
     useEffect(() => {
