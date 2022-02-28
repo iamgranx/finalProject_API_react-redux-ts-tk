@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useReducer } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,17 +11,23 @@ import { setUsers } from "store/users/users.actions";
 
 
 import UserWrapper from "components/User/User";
+import { User } from "api/users.types";
+import { ResponesSucces } from "./Users.types";
+import { getUser } from "api/users";
 
-
+ 
 
 const UserList: React.FC = () => {
 
+
     const { userList } = useSelector(getSlice);
     const dispatch = useDispatch();
+    
 
     useEffect(() => {
-        dispatch(setUsers());
-    }, [dispatch]);
+      getUser().then((data) => dispatch(setUsers(data.results)))  ;
+   }, [dispatch]);
+
 
     
     return (
@@ -29,7 +35,7 @@ const UserList: React.FC = () => {
       <nav aria-label="main mailbox folders">
         <List>
           {userList.map((user) => (
-              <UserWrapper key={user.id} {...user} />
+              <UserWrapper key={user.id.value} {...user}  />
           ))}
         </List>
       </nav>

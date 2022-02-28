@@ -11,7 +11,7 @@ import { Avatar } from '@mui/material';
 
 import { UserProps } from './User.types';
 
-const UserWrapper: React.FC<UserProps> = ({ id, picture, name,  onClick }) => {
+const UserWrapper: React.FC<UserProps> = ({ id, picture, name}) => {
     // const handleClick = () => {
     //     onClick(id);
     // };

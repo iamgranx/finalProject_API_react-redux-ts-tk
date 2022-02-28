@@ -17,7 +17,9 @@ interface Picture {
   large: string;
   medium: string;
   thumbnail: string;
-}
+};
+
+
 
 export interface User {
   id: Id;
@@ -27,3 +29,7 @@ export interface User {
   location: Location;
   nat: string;
 };
+
+export interface Results {
+  results: User;
+}

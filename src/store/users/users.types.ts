@@ -4,3 +4,4 @@ export interface State {
   readonly userList: User[],
   readonly user: User | null;
 }
+
