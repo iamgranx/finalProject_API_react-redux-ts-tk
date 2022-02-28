@@ -30,6 +30,6 @@ export interface User {
   nat: string;
 };
 
-export interface Results {
+export interface ResponseSucces{
   results: User;
 }

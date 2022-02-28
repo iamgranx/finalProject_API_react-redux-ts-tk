@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { User } from '../../api/users.types';
 
 
 import Box from '@mui/material/Box';
@@ -11,12 +10,13 @@ import { Avatar } from '@mui/material';
 
 import { UserProps } from './User.types';
 
-const UserWrapper: React.FC<UserProps> = ({ id, picture, name}) => {
+const UserWrapper: React.FC<UserProps> = ({ picture, name, id }) => {
     // const handleClick = () => {
     //     onClick(id);
     // };
 
     return (
+      
         <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">
 
@@ -25,7 +25,7 @@ const UserWrapper: React.FC<UserProps> = ({ id, picture, name}) => {
               <ListItemIcon>
                 <Avatar src={picture.thumbnail} />
               </ListItemIcon>
-              <ListItemText primary={name} />
+              <ListItemText primary={name.first + name.last} />
             </ListItemButton>
           </ListItem>
       </nav>

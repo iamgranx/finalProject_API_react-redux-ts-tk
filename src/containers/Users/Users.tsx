@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,8 +11,7 @@ import { setUsers } from "store/users/users.actions";
 
 
 import UserWrapper from "components/User/User";
-import { User } from "api/users.types";
-import { ResponesSucces } from "./Users.types";
+// import { User, ResponseSucces } from "api/users.types";
 import { getUser } from "api/users";
 
  
@@ -28,7 +27,9 @@ const UserList: React.FC = () => {
       getUser().then((data) => dispatch(setUsers(data.results)))  ;
    }, [dispatch]);
 
+   
 
+  
     
     return (
         <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
@@ -38,6 +39,7 @@ const UserList: React.FC = () => {
               <UserWrapper key={user.id.value} {...user}  />
           ))}
         </List>
+        
       </nav>
     </Box>
         

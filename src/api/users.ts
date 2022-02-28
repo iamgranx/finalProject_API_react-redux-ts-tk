@@ -1,9 +1,9 @@
 import axios from "axios";
 
-import { User } from "./users.types"
+import {  ResponseSucces } from "./users.types"
 
 export const getUser = async () => {
-  const { data } = await axios.get<User[]>(
+  const { data } = await axios.get<ResponseSucces>(
     "https://randomuser.me/api/"
   );
   return data
