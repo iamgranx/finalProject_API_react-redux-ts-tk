@@ -28,8 +28,15 @@ export interface User {
   picture: Picture;
   location: Location;
   nat: string;
+  
 };
 
 export interface ResponseSucces{
   results: User;
+
 }
+ export interface Pagination {
+   page: number;
+   results: number;
+ }
+

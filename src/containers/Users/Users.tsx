@@ -7,11 +7,10 @@ import List from '@mui/material/List';
 
 
 import { getSlice } from "store/users/users.selectors";
-import { setUsers } from "store/users/users.actions";
+import { setUsers, setCurrentPage } from "store/users/users.actions";
 
 
 import UserWrapper from "components/User/User";
-// import { User, ResponseSucces } from "api/users.types";
 import { getUser } from "api/users";
 
  
@@ -19,16 +18,22 @@ import { getUser } from "api/users";
 const UserList: React.FC = () => {
 
 
-    const { userList } = useSelector(getSlice);
+    const { userList, currentPage, perPage } = useSelector(getSlice);
     const dispatch = useDispatch();
-    console.log(userList)
-    
+ 
+
 
     useEffect(() => {
-      getUser().then((data) => dispatch(setUsers(data.results)))  ;
-   }, [dispatch]);
+      getUser(currentPage, perPage).then((data) => dispatch(setUsers(data.results))) ;
+   }, [currentPage, dispatch, perPage]);
 
-   
+   function handleChange() {
+    dispatch(setCurrentPage(currentPage))
+  } 
+
+ 
+
+ 
 
   
     

@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import { HeaderProps } from './Header.types';
+import BasicPagination from 'components/Pagination/Pagination';
 
 const Header: React.FC<HeaderProps> = () => {
   return (
@@ -14,6 +15,7 @@ const Header: React.FC<HeaderProps> = () => {
           <Typography variant="h6" color="inherit" component="div">
             Photos
           </Typography>
+          <BasicPagination />
         </Toolbar>
       </AppBar>
     </Box>
