@@ -11,6 +11,7 @@ import { setUsers, setCurrentPage } from "store/users/users.actions";
 
 
 import UserWrapper from "components/User/User";
+import Header from "components/Header";
 import { getUser } from "api/users";
 
  
@@ -28,16 +29,15 @@ const UserList: React.FC = () => {
    }, [currentPage, dispatch, perPage]);
 
    function handleChange() {
-    dispatch(setCurrentPage(currentPage))
-  } 
+    dispatch(setCurrentPage(currentPage))};
 
- 
 
- 
 
-  
-    
-    return (
+
+
+    return (   
+      <>
+      <Header onHandle={handleChange} page={currentPage}/>      
         <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">
         <List>
@@ -48,7 +48,7 @@ const UserList: React.FC = () => {
         
       </nav>
     </Box>
-        
+      </>  
     )
 };
 

@@ -6,8 +6,16 @@ import Typography from '@mui/material/Typography';
 
 import { HeaderProps } from './Header.types';
 import BasicPagination from 'components/Pagination/Pagination';
+// import { useDispatch } from 'react-redux';
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({onHandle, page}) => {
+  
+  
+  // const dispatch = useDispatch();
+  
+  // const onHandleP = dispatch(onHandle)
+ console.log(onHandle(page))
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -15,7 +23,7 @@ const Header: React.FC<HeaderProps> = () => {
           <Typography variant="h6" color="inherit" component="div">
             Photos
           </Typography>
-          <BasicPagination />
+          <BasicPagination onHandle={onHandle} page={page} />
         </Toolbar>
       </AppBar>
     </Box>

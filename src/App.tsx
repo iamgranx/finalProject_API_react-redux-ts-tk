@@ -15,7 +15,7 @@ const App: React.FC = () => {
   return (
     <Provider store ={store} >
       <Router>
-      <Header />
+      {/* <Header /> */}
       <AppRouter />
       </Router>
     </Provider>
