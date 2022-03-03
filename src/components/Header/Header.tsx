@@ -12,7 +12,6 @@ import BasicPagination from 'components/Pagination/Pagination';
 import ButtonsForFiter from 'components/GenderFilter/GenderFilter';
 
 const Header: React.FC<HeaderProps> = ({page, nat, results, gender}) => {
-    console.log(results)
   return (
     <Box  sx={{ width:'100%', maxWidth: 750, flexGrow: 1, mb: 1}}>
       <AppBar position="static">

@@ -1,6 +1,5 @@
 import React from "react";
-import  Header from "../src/components/Header";
-import UserList from "containers/Main/Main";
+
 
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -15,7 +14,6 @@ const App: React.FC = () => {
   return (
     <Provider store ={store} >
       <Router>
-      {/* <Header /> */}
       <AppRouter />
       </Router>
     </Provider>
