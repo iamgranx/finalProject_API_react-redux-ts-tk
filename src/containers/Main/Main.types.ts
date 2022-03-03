@@ -1,3 +1,4 @@
+
 export interface UsersProps {
     currentPage: number;
     perPage: string;

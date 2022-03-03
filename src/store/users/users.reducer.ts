@@ -10,11 +10,12 @@ const initialState: State = {
     user: null,
     currentPage: 1,
     perPage: "10",
-    gender: "female,male",
+    gender: "",
     nat: "au,br,ca,ch,de,dk,es,fi,fr,gb,ie,ir,nl,nz,tr,us",
 
 
 };
+console.log(initialState.gender)
 
 export const usersReducer = createReducer<State>(initialState, {
     [setUsers.type]: (state, action: PayloadAction<User[]>) => {

@@ -1,18 +1,18 @@
 import * as React from 'react';
 
 
-import Box from '@mui/material/Box';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import { Avatar } from '@mui/material';
-import Modal from '@mui/material/Modal';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
+import {Box,
+        ListItem,
+        ListItemButton,
+        ListItemIcon,
+        ListItemText,
+        Avatar,
+        Modal,
+        CardContent,
+        Typography,
+        ImageList,
+        ImageListItem,
+        ImageListItemBar} from '@mui/material';
 
 import { UserProps } from './User.types';
 

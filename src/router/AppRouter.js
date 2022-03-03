@@ -2,11 +2,8 @@ import React, { lazy, Suspense } from "react";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 
-// import PostsPage from "../pages/Posts";
-// import PostDetailPage from "../pages/PostDetail";
 
 const MainPage = lazy(() => import("../pages/mainPage"));
-
 
 const AppRouter = () => {
   return (

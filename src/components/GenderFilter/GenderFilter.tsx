@@ -5,11 +5,10 @@ import { useDispatch } from "react-redux";
 
 import FemaleIcon from '@mui/icons-material/Female';
 import MaleIcon from '@mui/icons-material/Male';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import {ToggleButton, ToggleButtonGroup } from '@mui/material';
+
+
 import { GenderProps } from "./GenderFilter.types";
-
-
 import { setGender } from "store/users/users.actions";
 
 
@@ -19,11 +18,12 @@ const ButtonsForFiter: React.FC<GenderProps> = ({gender}) => {
 
   const handleFormat = (
     event: React.MouseEvent<HTMLElement>,
-    changeGender: string,
+    newGender: string,
   ) => {
-    dispatch(setGender(changeGender));
+    if (newGender) {
+      dispatch(setGender(newGender))
+    };
   };
-
 
   return (
     <ToggleButtonGroup
@@ -31,10 +31,10 @@ const ButtonsForFiter: React.FC<GenderProps> = ({gender}) => {
       onChange={handleFormat}
       aria-label="text formatting"
     >
-      <ToggleButton value="female," aria-label="bold">
+      <ToggleButton value="female">
         <FemaleIcon />
       </ToggleButton>
-      <ToggleButton value="male" aria-label="italic">
+      <ToggleButton value="male">
         <MaleIcon />
       </ToggleButton>
     </ToggleButtonGroup>
