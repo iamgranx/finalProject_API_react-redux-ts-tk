@@ -1,4 +1,7 @@
+
  export interface HeaderProps {
      page: number;
-     onHandle (currentPage: number): any;
+     results: string;
+     nat: string;
+     gender: string;
  };

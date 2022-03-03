@@ -5,25 +5,24 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import { HeaderProps } from './Header.types';
+
+
+import BasicSelect from 'components/NatFilter/NatFilter';
 import BasicPagination from 'components/Pagination/Pagination';
-// import { useDispatch } from 'react-redux';
+import ButtonsForFiter from 'components/GenderFilter/GenderFilter';
 
-const Header: React.FC<HeaderProps> = ({onHandle, page}) => {
-  
-  
-  // const dispatch = useDispatch();
-  
-  // const onHandleP = dispatch(onHandle)
- console.log(onHandle(page))
-
+const Header: React.FC<HeaderProps> = ({page, nat, results, gender}) => {
+    console.log(results)
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box  sx={{ width:'100%', maxWidth: 750, flexGrow: 1, mb: 1}}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <Typography variant="h6" color="inherit" component="div">
-            Photos
+          <Typography variant="body1" color="inherit" component="div">
+            Users
           </Typography>
-          <BasicPagination onHandle={onHandle} page={page} />
+          <BasicPagination page={page} results={results} />
+          <BasicSelect nat={nat} />
+          <ButtonsForFiter gender={gender} />
         </Toolbar>
       </AppBar>
     </Box>

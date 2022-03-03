@@ -1,6 +1,6 @@
 import React from "react";
 import  Header from "../src/components/Header";
-import UserList from "containers/Users/Users";
+import UserList from "containers/Main/Main";
 
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";

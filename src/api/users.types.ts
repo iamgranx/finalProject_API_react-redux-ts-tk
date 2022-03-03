@@ -18,6 +18,10 @@ interface Picture {
   medium: string;
   thumbnail: string;
 };
+interface Dob {
+  date: string,
+  age: number,
+}
 
 
 
@@ -28,6 +32,9 @@ export interface User {
   picture: Picture;
   location: Location;
   nat: string;
+  email: string;
+  dob: Dob,
+
   
 };
 

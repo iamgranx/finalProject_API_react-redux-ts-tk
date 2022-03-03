@@ -2,7 +2,8 @@
 
 export interface PaginationProps {
     page: number;
-    onHandle: (currentPage: number) => any;
+    results: string;
+    // onChange (): any;
 
 
 }
